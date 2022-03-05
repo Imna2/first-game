@@ -7,7 +7,11 @@ public class Star : MonoBehaviour
    
     public AudioClip getStar;
 
-    
+    private void Update()
+    {
+        if (this.transform.position.y < -15)
+            StarRemove();
+    }
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -22,6 +26,10 @@ public class Star : MonoBehaviour
         }
     }
 
+    void StarRemove() //StartScene 떨어지는 별 위치 리셋
+    {
+        Destroy(this.gameObject);
+    }
 
     /* void Update()
     {
