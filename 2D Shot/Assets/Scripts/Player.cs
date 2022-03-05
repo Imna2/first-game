@@ -57,7 +57,7 @@ public class Player : MonoBehaviour
             //만약 특정좌표를 넘어가면 해당 스테이지를 다시 불러오는 스크립트 작성하여야함.
 
             //GameManager.I.Starset(GameManager.I.stages[GameManager.I.stagenum]);
-            //GameManager.I.Retry();
+            GameManager.I.Retry();
         }
     }
 
